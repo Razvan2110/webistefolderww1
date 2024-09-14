@@ -1,0 +1,18 @@
+button {
+    background-color: #000; /* Black background */
+    border: none; /* Remove default border */
+    color: rgb(0, 0, 0); /* Yellow text */
+    padding: 10px 20px; /* Add padding */
+    margin: 5px 0; /* Add margin between buttons, vertical spacing */
+    border-radius: 5px; /* Rounded corners */
+    cursor: progress; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s; /* Smooth background color transition */
+    display: -moz-box; /* Display buttons as block elements */
+    width: 200px; /* Set a fixed width */
+  }
+  
+  button:hover {
+    background-color: #943030; /* Darker black on hover */
+  }
+ 

@@ -1,0 +1,25 @@
+.fullscreen-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../desktop-wallpaper-ww1-on-dog-verdun-thumbnail.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.text-container {
+  position: relative;
+  top: 120px; /* Ensure text is below the navbar */
+  max-height: calc(100vh - 120px); /* Allow text container to fit within the viewport */
+  overflow-y: auto; /* This enables scrolling */
+  background-color: rgba(0, 0, 0, 0.5); /* Background for the text */
+  color: white; /* Text color */
+  padding: 20px;
+  margin: 0 20px; /* Some margin around the text */
+  font-size: 18px;
+  border-radius: 10px; /* Rounded corners */
+}
