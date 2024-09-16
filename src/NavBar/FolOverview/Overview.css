@@ -1,25 +1,33 @@
+/* Ensure the full background displays properly */
 .fullscreen-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-image: url('../desktop-wallpaper-ww1-on-dog-verdun-thumbnail.jpg');
+  background-image: url('../desktop-wallpaper-ww1-on-dog-verdun-thumbnail.jpg');/* Replace with the correct path */
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  z-index: -1;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden; /* Ensure the background covers the full area */
 }
 
+/* The container for the text */
 .text-container {
-  position: relative;
-  top: 120px; /* Ensure text is below the navbar */
-  max-height: calc(100vh - 120px); /* Allow text container to fit within the viewport */
-  overflow-y: auto; /* This enables scrolling */
-  background-color: rgba(0, 0, 0, 0.5); /* Background for the text */
-  color: white; /* Text color */
+  background-color: rgba(0, 0, 0, 0.7); /* Dark overlay for readability */
+  width: 80%; /* Adjust width as necessary */
+  max-width: 800px; /* Limit maximum width */
+  height: 80vh; /* Adjust height for scrolling */
   padding: 20px;
-  margin: 0 20px; /* Some margin around the text */
+  overflow-y: auto;
+  border-radius: 8px; /* Rounded corners */
+  color: white;
+}
+
+/* Style for the actual text content */
+.text-content {
+  max-width: 700px; /* Limits the width of the text */
+  margin: 0 auto; /* Centers the text inside the container */
+  line-height: 1.6;
   font-size: 18px;
-  border-radius: 10px; /* Rounded corners */
 }
