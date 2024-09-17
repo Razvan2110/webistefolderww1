@@ -1,40 +1,40 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './Overview.css';  
 import textWW from './text.js'; 
 import { motion, useScroll } from 'framer-motion';
 
 const Overview = () => {
-  const { scrollYProgress } = useScroll(); 
+  const textContainerRef = useRef(null);  
+  const { scrollYProgress } = useScroll({
+    container: textContainerRef,        
+  });
 
   return (
     <div className="fullscreen-background">
-      {/* Progress Bar */}
+      
       <motion.div
         style={{
-          scaleX: scrollYProgress,       // This will dynamically scale the width based on scroll progress
-          transformOrigin: "left",        // Starts scaling from the left
-          backgroundColor: "blue",        // Progress bar color
-          position: "fixed",              // Fixes the progress bar to the bottom of the viewport
-          bottom: 0,                      // Sticks the progress bar to the bottom of the screen
-          left: 0,                        // Sticks it to the left edge
-          width: "100%",                  // Full width of the screen
-          height: "5px",                  // Height of the progress bar
-          zIndex: 1000,                   // Ensures it's above other content
+          scaleX: scrollYProgress,       
+          transformOrigin: "left",        
+          backgroundColor: "brown",      
+          position: "fixed",            
+          bottom: 0,                   
+          left: 0,                      
+          width: "100%",                 
+          height: "35px",                  
+          zIndex: 1000,                
         }}
-      />
-
-      {/* Main Content */}
-      <div
-        style={{
-          maxWidth: "700px",
-          margin: "auto",
-          paddingTop: "20px",              // Adds padding at the top to avoid content being hidden behind the navbar (if any)
-          color: "white",                  // You can adjust the color to make it more readable
-        }}
+      /> 
+      <div 
+        className="text-container" 
+        ref={textContainerRef}           // referinta la text container
+        
       >
-        <p>{textWW}</p>
-        <p>{textWW}</p>
-        <p>{textWW}</p>
+        <div style={{ maxWidth: "700px", margin: "auto", paddingTop: "20px", color: "white" }}>
+          <p>{textWW}</p>
+          <p>{textWW}</p>
+          <p>{textWW}</p>
+        </div>
       </div>
     </div>
   );

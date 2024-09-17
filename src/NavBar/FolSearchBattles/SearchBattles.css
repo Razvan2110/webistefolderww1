@@ -50,3 +50,7 @@
     margin: 5px 0;
     font-size: 14px;
 }
+
+p {
+    margin: 1em 0; /* Add some margin to paragraphs for readability */
+  }
