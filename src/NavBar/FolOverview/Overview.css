@@ -14,7 +14,7 @@
 
 /* The container for the text */
 .text-container {
-  background-color: rgba(0, 0, 0, 0.7); /* Dark overlay for readability */
+  background-color: rgba(41, 29, 29, 0.7); /* Dark overlay for readability */
   width: 80%; /* Adjust width as necessary */
   max-width: 800px; /* Limit maximum width */
   height: 80vh; /* Adjust height for scrolling */

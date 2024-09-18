@@ -1,56 +1,73 @@
-.search-container {
+/* Background container */
+.background-image {
+    background-image: url('../desktop-wallpaper-ww1-on-dog-verdun-thumbnail.jpg'); /* Path to your image */
+    background-size: cover;           /* Ensures the image covers the entire background */
+    background-position: center;      /* Centers the image */
+    background-repeat: no-repeat;     /* Prevents the image from repeating */
+    width: 100vw;                     /* Full width of the viewport */
+    height: 100vh;                    /* Full height of the viewport */
+    display: flex;                    /* Flexbox to center content */
+    align-items: center;              /* Vertically centers the content */
+    justify-content: center;          /* Horizontally centers the content */
+    position: relative;               /* Allows positioning of the search container */
+  }
+  
+  /* Search container */
+  .search-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: auto; /* Allow the container to grow based on content */
+    height: auto;                     /* Allow the container to grow based on content */
     padding: 20px;
     width: 100%;
-}
-
-.search-input {
+    max-width: 600px;                 /* Constrain the container width */
+    background-color: rgba(0, 0, 0, 0.85); /* Darker overlay (85% opacity) for better contrast */
+    border-radius: 10px;              /* Rounded corners */
+    color: white;                     /* Set text color to white for better readability */
+  }
+  
+  /* Search input field */
+  .search-input {
     width: 100%;
-    max-width: 600px;
     padding: 15px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 24px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     outline: none;
     transition: box-shadow 0.3s;
-}
-
-.search-input:focus {
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-.results-list {
+  }
+  
+  .search-input:focus {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Results list */
+  .results-list {
     list-style-type: none;
     padding: 0;
     margin-top: 20px;
     width: 100%;
-    max-width: 600px;
-}
-
-.result-item {
+  }
+  
+  .result-item {
     border-bottom: 1px solid #ddd;
     padding: 10px 0;
-}
-
-.result-item h3 {
+    color: white;                     /* Keep the text white for readability */
+  }
+  
+  .result-item h3 {
     margin: 0;
     font-size: 18px;
-}
-
-.result-item p {
+  }
+  
+  .result-item p {
     margin: 5px 0;
     font-size: 14px;
-}
-
-p {
-    margin: 1em 0; /* Add some margin to paragraphs for readability */
   }
+  
+  p {
+    margin: 1em 0;
+  }
+  

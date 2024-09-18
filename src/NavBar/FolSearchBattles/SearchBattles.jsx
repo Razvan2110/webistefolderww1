@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import data from './BattlesData.js';
-import './SearchBattles.css'; // Import the CSS file for styling
+import './SearchBattles.css';
 
 const getFilteredItems = (query, items) => {
   if (!query) {
@@ -19,6 +19,7 @@ function SearchBattles() {
   const filteredItems = getFilteredItems(query, items);
 
   return (
+    <div className="background-image">
     <div className="search-container">
       <input
         type="text"
@@ -40,7 +41,7 @@ function SearchBattles() {
           </li>
         ))}
       </ul>
-      
+      </div>
     </div>
   );
 }
